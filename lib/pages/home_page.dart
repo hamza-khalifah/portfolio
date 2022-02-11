@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_button/flutter_social_button.dart';
 import 'package:get/get.dart';
+import 'package:hamaza_portfolio/pages/about_page.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:animated_background/animated_background.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key, required this.title}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
-  final String title;
+  final String title = 'Welcome to my portfolio';
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -32,6 +33,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         title: Text(widget.title),
         centerTitle: true,
         actions: [
+          IconButton(
+            icon: const Icon(Icons.info_outline),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => AboutPage()));
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.wb_sunny),
             onPressed: () {

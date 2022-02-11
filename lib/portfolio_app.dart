@@ -9,10 +9,9 @@ class PortfolioApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hamza Portfolio',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomePage(title: 'Welcome to my portfolio'),
+      theme:
+          ThemeData(primarySwatch: Colors.blue, brightness: Brightness.light),
+      home: const HomePage(),
     );
   }
 }
