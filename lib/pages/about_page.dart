@@ -56,7 +56,7 @@ class AboutPage extends StatelessWidget {
               shadowColor: Colors.black,
               color: Colors.blue,
               child: ListTile(
-                trailing: Icon(Icons.accessibility_new),
+                trailing: const Icon(Icons.accessibility_new),
                 leading: Icon(Icons.accessibility_new),
                 title: Container(
                   color: Colors.grey,
