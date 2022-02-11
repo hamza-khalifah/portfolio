@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hamaza_portfolio/pages/home_page.dart';
 
 class AboutPage extends StatelessWidget {
   @override
@@ -9,16 +10,60 @@ class AboutPage extends StatelessWidget {
         backgroundColor: Colors.redAccent,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('Click button to back to Main Page'),
-            RaisedButton(
-              textColor: Colors.white,
-              color: Colors.redAccent,
-              child: const Text('Back to Main Page'),
-              onPressed: () {},
-            )
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
+        child: ListView(
+          children: [
+            Card(
+              color: Colors.blue,
+              elevation: 20.0,
+              shadowColor: Colors.green,
+              child: ListTile(
+                trailing: Icon(Icons.access_alarm),
+                leading: Icon(Icons.access_alarms),
+                title: Container(
+                  color: Colors.red,
+                  child: Text("title"),
+                ),
+                // subtitle: Text("subtitle"),
+              ),
+            ),
+            Container(
+              color: Colors.yellow,
+              child: Text("by"),
+            ),
+            Container(
+              color: Colors.green,
+              child: Text("hello"),
+            ),
+            Container(
+              color: Colors.blue,
+              child: Text("go"),
+            ),
+            Container(
+              color: Colors.grey,
+              child: Text("bee"),
+            ),
+            Container(
+              color: Colors.green,
+              child: Text("hello"),
+            ),
+            Container(
+              color: Colors.blue,
+              child: Text("go"),
+            ),
+            Card(
+              shadowColor: Colors.black,
+              color: Colors.blue,
+              child: ListTile(
+                trailing: Icon(Icons.accessibility_new),
+                leading: Icon(Icons.accessibility_new),
+                title: Container(
+                  color: Colors.grey,
+                  child: Text("bee"),
+                ),
+              ),
+            ),
           ],
         ),
       ),
